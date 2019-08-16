@@ -83,7 +83,7 @@ def upload(user, source_path, destination_path, metadata_path=None, nodata_value
 
     __verify_path_for_upload(destination_path)
 
-    path = os.path.join(os.path.expanduser(source_path), '*.tif')
+    path = os.path.join(os.path.expanduser(source_path), '*.TFRecord')
     all_images_paths = glob.glob(path)
     if len(all_images_paths) == 0:
         print('%s does not contain any tif images.', path)
