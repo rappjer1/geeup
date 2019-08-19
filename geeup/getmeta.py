@@ -10,7 +10,7 @@ import csv
 
 def getmeta(indir,mfile):
     i=1
-    flength=len([name for name in os.listdir(indir) if name.endswith('.tif')])
+    flength=len([name for name in os.listdir(indir) if name.endswith('.TFRecord')])
     with open(mfile,'w') as csvfile:
         writer=csv.DictWriter(csvfile,fieldnames=["id_no", "xsize", "ysize", "pixel_resolution","num_bands"], delimiter=',')
         writer.writeheader()
